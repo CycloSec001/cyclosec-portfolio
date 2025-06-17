@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Base, ScrollToTop } from "./components";
-import { Homepage, Aboutpage, Pricing } from "./pages";
-
+import { Homepage, Aboutpage, Pricing, RouteError } from "./pages";
 
 export default function App() {
   return (
@@ -15,6 +14,7 @@ export default function App() {
             <Route path="pricing" element={<Pricing />} />
 
           </Route>
+          <Route path="*" element={<RouteError/>} />
         </Routes>
       </BrowserRouter>
     </>
